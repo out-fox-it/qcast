@@ -1,26 +1,14 @@
 import React from 'react'
-import './FeaturedImg.css'
+import { StyledSection, Wrapper, Image } from './styled'
 
 const FeaturedImg: React.FC = () => (
-	<section className="featuredImgWrapper">
-		<div className="itemBox">
-			<img
-				src="https://i.ibb.co/8Kt56TL/qcast.png"
-				className="item"
-				alt="item"
-			></img>
-			<img
-				src="https://i.ibb.co/8Kt56TL/qcast.png"
-				className="item"
-				alt="item"
-			></img>
-			<img
-				src="https://i.ibb.co/8Kt56TL/qcast.png"
-				className="item"
-				alt="item"
-			></img>
-		</div>
-	</section>
+	<StyledSection>
+		<Wrapper>
+			<Image src="https://i.ibb.co/8Kt56TL/qcast.png" alt="item" />
+			<Image src="https://i.ibb.co/8Kt56TL/qcast.png" alt="item" />
+			<Image src="https://i.ibb.co/8Kt56TL/qcast.png" alt="item" />
+		</Wrapper>
+	</StyledSection>
 )
 
 export default FeaturedImg

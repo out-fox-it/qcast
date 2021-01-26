@@ -1,10 +1,10 @@
 import React from 'react'
-import './Header.css'
+import { StyledHeader, Title } from './styled'
 
 const Header: React.FC = () => (
-	<header className="headerWrapper">
-		<h1 className="headerTitle headerStrike">QCAST</h1>
-	</header>
+	<StyledHeader>
+		<Title>QCAST</Title>
+	</StyledHeader>
 )
 
 export default Header

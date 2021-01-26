@@ -1,13 +1,16 @@
-.headerWrapper {
+import styled from 'styled-components'
+
+export const StyledHeader = styled.header`
 	grid-row: 1;
 	grid-column: 2;
 	align-self: self-end;
 	margin: 1em;
 	padding-top: 1em;
-}
+`
 
-.headerTitle {
+export const Title = styled.h1`
 	grid-column: 2;
+	position: relative;
 	font-size: 5em;
 	background-color: rgba(132, 223, 254, 1);
 	background-image: linear-gradient(
@@ -23,18 +26,14 @@
 	margin: 1em;
 	margin-block-end: auto;
 	margin-block-start: auto;
-}
 
-.headerStrike {
-	position: relative;
-}
-
-.headerStrike:before {
-	position: absolute;
-	content: '';
-	left: 0;
-	top: 52%;
-	right: 0;
-	border: 1px solid white;
-	outline: 3px solid black;
-}
+	&:before {
+		position: absolute;
+		content: '';
+		left: 0;
+		top: 52%;
+		right: 0;
+		border: 1px solid white;
+		outline: 3px solid black;
+	}
+`

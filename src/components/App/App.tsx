@@ -2,14 +2,14 @@ import React from 'react'
 import FeaturedImg from '../FeaturedImg/FeaturedImg'
 import Header from '../Header/Header'
 import Footer from '../Footer/Footer'
-import './App.css'
+import { StyledArticle } from './styled'
 
 const App: React.FC = () => (
-	<article className="gridContainer">
+	<StyledArticle>
 		<Header />
 		<FeaturedImg />
 		<Footer />
-	</article>
+	</StyledArticle>
 )
 
 export default App
