@@ -1,7 +1,7 @@
 import React from 'react'
 import './Footer.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { library } from '@fortawesome/fontawesome-svg-core'
+import { IconName, library } from '@fortawesome/fontawesome-svg-core'
 import {
 	fab,
 	faFacebook,
@@ -11,32 +11,27 @@ import {
 	faTwitter,
 } from '@fortawesome/free-brands-svg-icons'
 
+const icons = {
+	spotify: faSpotify,
+	instagram: faInstagram,
+	facebook: faFacebook,
+	linkedin: faLinkedin,
+	twitter: faTwitter,
+}
+
 const Footer: React.FC = () => {
-	library.add(fab, faInstagram, faFacebook, faLinkedin, faTwitter, faSpotify)
+	library.add(fab, ...Object.values(icons))
 
 	return (
 		<footer className="footerWrapper">
 			<div className="footerContent">
-				<FontAwesomeIcon
-					className="footerItem"
-					icon={['fab', 'spotify']}
-				/>
-				<FontAwesomeIcon
-					className="footerItem"
-					icon={['fab', 'instagram']}
-				/>
-				<FontAwesomeIcon
-					className="footerItem"
-					icon={['fab', 'facebook']}
-				/>
-				<FontAwesomeIcon
-					className="footerItem"
-					icon={['fab', 'linkedin']}
-				/>
-				<FontAwesomeIcon
-					className="footerItem"
-					icon={['fab', 'twitter']}
-				/>
+				{Object.keys(icons).map((icon) => (
+					<FontAwesomeIcon
+						key={icon}
+						className="footerItem"
+						icon={['fab', icon as IconName]}
+					/>
+				))}
 			</div>
 		</footer>
 	)
